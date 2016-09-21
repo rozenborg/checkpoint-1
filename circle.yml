@@ -1,0 +1,9 @@
+machine:
+	python:
+		version: 3.5.1
+test:
+  override:
+    - nosetests test/
+dependencies:
+  pre:
+    - pip install -r requirements.txt
