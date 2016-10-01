@@ -66,6 +66,7 @@ class AmityTest(unittest.TestCase):
     #
     #     person = PersonFactory.create("fellow", "Bob", 26, "Y", wants_residence="N", level="D4")
     #     Amity.add_object_to_dictionary(amity, person)
+
     #     self.assertEqual(person.id, "000002")
     #
     #     person = PersonFactory.create("staff", "Seni", 50, "M", job_title="Director of Operations",
