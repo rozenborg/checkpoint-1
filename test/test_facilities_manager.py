@@ -8,14 +8,14 @@ from app.amity_manager import RoomManager
 class AllTests(unittest.TestCase):
     def test_can_add_people_to_system(self):
         # tests whether you can Fellows and team members to people databases
-        delete_people()  # don't need this. Should instead use a mock database
+        deletePeople()
         addPerson("Bob", "bob@andela.com", "m", "fellow", "D1", "y")
         addPerson("Louis", "louis@andela.com", "f", "staff", "Accountant", "Finance")
         people = reportPeople()
         # this is where we see whether the people were added to the database
         # will probably execute a query and then use the assert statements against the query
-        assertIn(fellow, people)
-        assertIn(staff, people)
+        assertIn("bob@andela.com", people)
+        assertIn("louis@andela.com", people)
 
     def test_can_add_rooms_to_system(self):
         # tests whether you can add rooms to rooms database
@@ -34,6 +34,7 @@ class AllTests(unittest.TestCase):
         assignRoomPurpose("Moon", "Living Quarters")
         rooms = reportRooms()
         # this is where we see whether the rooms were given purposes
+        assertTrue(rooms[])
 
     def test_can_manually_assign_people_to_rooms(self):
         """
