@@ -27,3 +27,5 @@ class DatabaseWriter(object):
             c.execute("""DELETE FROM %s""", (table_name,))
         db.commit()
         db.close()
+
+    # def select_from_database():

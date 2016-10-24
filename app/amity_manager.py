@@ -1,6 +1,3 @@
-from app import database_writer
-
-
 class RoomManager(object):
     def __init__(self):
         pass
